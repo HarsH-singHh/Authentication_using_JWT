@@ -1,0 +1,15 @@
+.reg-form{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.reg-form input{
+    margin: 0 10px;
+}
+
+.reg-login-link{
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    border: 1px solid black;
+}
