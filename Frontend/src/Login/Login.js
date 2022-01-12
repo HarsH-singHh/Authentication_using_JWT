@@ -8,6 +8,7 @@ export default function Login(){
 
     return(
         <>
+        <h1>THIS IS LOGIN PAGE</h1>
         <form className='login-form'>
             <input type='text' placeholder='username' name='username'></input>
             <input type='password' placeholder='password' name='password'></input>
