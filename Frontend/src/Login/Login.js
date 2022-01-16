@@ -7,16 +7,19 @@ import './Login.css';
 export default function Login(){
 
     return(
-        <>
-        <h1>THIS IS LOGIN PAGE</h1>
+        <div className='login-container'>
+        <h1>LOGIN</h1>
         <form className='login-form'>
-            <input type='text' placeholder='username' name='username'></input>
-            <input type='password' placeholder='password' name='password'></input>
+            <label>Username : </label><input type='text' placeholder='username' name='username'></input>
+            <br></br>
+            <label>Password &nbsp;: </label><input type='password' placeholder='password' name='password'></input>
 
         </form>
-        
-        <Link className='login-reg-link' to="/"> GO TO REGISTER PAGE  </Link>
-        </>
+        <div className='reg-button-div'>
+        <h3>Not a user? Register</h3>
+        <Link className='login-reg-link' to="/">REGISTER</Link>
+        </div>
+        </div>
 
     );
 

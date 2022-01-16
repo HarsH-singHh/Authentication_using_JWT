@@ -1,15 +1,51 @@
+.login-container{
+    margin: 0 auto;
+    width: 600px;
+}
+
+.login-container h1{
+    position:sticky;
+    top: 0;
+    padding: 10px;
+    background-color: rgb(31, 32, 34);
+    color: chartreuse;
+    font-weight: 800;
+    text-align: center;
+    border-radius: 10px;
+}
+
 .login-form{
     text-align: center;
     margin-top: 20px;
 }
 
-.login-form input{
-    margin: 0 10px;
+.login-form label{
+    font-size: 20px;
+    font-weight: 600;
 }
+
+.login-form input{
+    margin: 5px 10px;
+    width: 200px;
+    height: 20px;   
+}
+
+.reg-button-div{
+    margin-top: 50px;
+}
+
 
 .login-reg-link{
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 20px;
     text-decoration: none;
     border: 1px solid black;
+    padding: 10px;
+    font-weight: 700;
+    background-color: black;
+    color: chartreuse;
+    border-radius: 10px;
+}
+.login-reg-link:hover{
+    transform: scale(1.2,1.2);
 }

@@ -7,20 +7,26 @@ import './Register.css';
 export default function Register(){
 
     return(
-        <>
-        <h1>THIS IS REGISTER PAGE</h1>
+        <div className='reg-container'>
+        <h1 className='nav'>REGISTER HERE</h1>
         <form className='reg-form'>
             
             <div className='full-name'>
-                <input className='first-name' placeholder='First Name'></input><input className='last-name' placeholder='Last Name'></input>
+                <label className='name-label'>Name : </label>
+                <input className='first-name' placeholder='First Name'>
+                </input><input className='last-name' placeholder='Last Name'></input>
             </div>
-            <input type='text' placeholder='username' name='username'></input>
-            <input type='password' placeholder='password' name='password'></input>
+
+            <label className='username-label'>Username : </label><input className='username-input' type='text' placeholder='username' name='username'></input>
+            <br></br>
+            <label className='pass-label'>Password &nbsp;: </label><input className='password-input' type='password' placeholder='password' name='password'></input>
 
         </form>
-        
-        <Link className='reg-login-link' to="/login"> GO TO LOGIN PAGE </Link>
-        </>
+        <div className='login-button-div'>
+            <h3>Already a user? Login</h3>
+            <Link className='reg-login-link' to="/login">LOGIN</Link>
+        </div>
+        </div>
 
     );
 
