@@ -1,11 +1,45 @@
 import './App.css';
-
+import React, { useEffect, useState } from 'react';
 
 function App() {
+
+  const [cities, setCities] = useState([]);
+
+  useEffect(()=>{
+
+    fetch("http://localhost:3001/cities")
+    .then((res)=>res.json())
+    .then((res)=>setCities(res))
+    .then((res)=>console.log(res))
+    .catch((err)=> console.log(err))
+
+  },[]);
+
+
   return (
     <div className="App">
       
-    <h1>THIS IS APP COMPONENT</h1>
+    <h1>CITIES LIST</h1>
+
+    <div className='cities-wrapper'>
+      {
+
+        cities.map((element,index) => {
+          return(
+          <div className='city-div' key={index}>
+            <p>{`City : ${element.name}`}</p>
+            <p>{`State : ${element.state}`}</p>
+
+          </div>
+          
+          
+          )
+        })
+
+      }
+    </div>
+
+
 
     </div>
   );
@@ -14,21 +48,3 @@ function App() {
 export default App;
 
 
-/*
-import Landingpage from './LandingPage/Landing_page';
-import Postview from './PostView/Postview';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-function App() {
-  return (
-
-    <div className="Wrapper">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Landingpage />}/>
-          <Route path="/postViewPage" element={<Postview />}/>
-          
-        </Routes>
-
-      </BrowserRouter>
-*/ 
